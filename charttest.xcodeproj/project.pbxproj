@@ -15,6 +15,8 @@
 		E31298DC215596770039081C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E31298DA215596770039081C /* LaunchScreen.storyboard */; };
 		E31298E7215596770039081C /* charttestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E31298E6215596770039081C /* charttestTests.swift */; };
 		E31298F2215596770039081C /* charttestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E31298F1215596770039081C /* charttestUITests.swift */; };
+		E31299152156D3380039081C /* ChartElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = E31299142156D3380039081C /* ChartElement.swift */; };
+		E31299172156E0620039081C /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E31299162156E0620039081C /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		E31298ED215596770039081C /* charttestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = charttestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E31298F1215596770039081C /* charttestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = charttestUITests.swift; sourceTree = "<group>"; };
 		E31298F3215596770039081C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E31299142156D3380039081C /* ChartElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartElement.swift; sourceTree = "<group>"; };
+		E31299162156E0620039081C /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +103,8 @@
 		E31298CD215596760039081C /* charttest */ = {
 			isa = PBXGroup;
 			children = (
+				E31299132156D3210039081C /* View */,
+				E31299122156D31B0039081C /* Controller */,
 				E31298CE215596760039081C /* AppDelegate.swift */,
 				E31298D0215596760039081C /* ViewController.swift */,
 				E31298D2215596760039081C /* Main.storyboard */,
@@ -106,6 +112,7 @@
 				E31298DA215596770039081C /* LaunchScreen.storyboard */,
 				E31298DD215596770039081C /* Info.plist */,
 				E31298D5215596760039081C /* charttest.xcdatamodeld */,
+				E31299162156E0620039081C /* Extensions.swift */,
 			);
 			path = charttest;
 			sourceTree = "<group>";
@@ -126,6 +133,21 @@
 				E31298F3215596770039081C /* Info.plist */,
 			);
 			path = charttestUITests;
+			sourceTree = "<group>";
+		};
+		E31299122156D31B0039081C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		E31299132156D3210039081C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E31299142156D3380039081C /* ChartElement.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,7 +281,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E31299172156E0620039081C /* Extensions.swift in Sources */,
 				E31298D7215596760039081C /* charttest.xcdatamodeld in Sources */,
+				E31299152156D3380039081C /* ChartElement.swift in Sources */,
 				E31298D1215596760039081C /* ViewController.swift in Sources */,
 				E31298CF215596760039081C /* AppDelegate.swift in Sources */,
 			);
@@ -443,7 +467,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.qn.charttest;
+				PRODUCT_BUNDLE_IDENTIFIER = com.qn.BookChart;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -461,7 +485,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.qn.charttest;
+				PRODUCT_BUNDLE_IDENTIFIER = com.qn.BookChart;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
