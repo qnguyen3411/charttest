@@ -17,6 +17,9 @@
 		E31298F2215596770039081C /* charttestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E31298F1215596770039081C /* charttestUITests.swift */; };
 		E31299152156D3380039081C /* ChartElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = E31299142156D3380039081C /* ChartElement.swift */; };
 		E31299172156E0620039081C /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E31299162156E0620039081C /* Extensions.swift */; };
+		E3129919215705DB0039081C /* DottedVerticalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3129918215705DB0039081C /* DottedVerticalView.swift */; };
+		E312991B2159547C0039081C /* ChartLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = E312991A2159547C0039081C /* ChartLink.swift */; };
+		E312991D2159CFAC0039081C /* TouchTrackingButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E312991C2159CFAC0039081C /* TouchTrackingButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +56,9 @@
 		E31298F3215596770039081C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E31299142156D3380039081C /* ChartElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartElement.swift; sourceTree = "<group>"; };
 		E31299162156E0620039081C /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		E3129918215705DB0039081C /* DottedVerticalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DottedVerticalView.swift; sourceTree = "<group>"; };
+		E312991A2159547C0039081C /* ChartLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartLink.swift; sourceTree = "<group>"; };
+		E312991C2159CFAC0039081C /* TouchTrackingButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchTrackingButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,13 +112,12 @@
 				E31299132156D3210039081C /* View */,
 				E31299122156D31B0039081C /* Controller */,
 				E31298CE215596760039081C /* AppDelegate.swift */,
-				E31298D0215596760039081C /* ViewController.swift */,
+				E31299162156E0620039081C /* Extensions.swift */,
 				E31298D2215596760039081C /* Main.storyboard */,
 				E31298D8215596770039081C /* Assets.xcassets */,
 				E31298DA215596770039081C /* LaunchScreen.storyboard */,
 				E31298DD215596770039081C /* Info.plist */,
 				E31298D5215596760039081C /* charttest.xcdatamodeld */,
-				E31299162156E0620039081C /* Extensions.swift */,
 			);
 			path = charttest;
 			sourceTree = "<group>";
@@ -138,6 +143,7 @@
 		E31299122156D31B0039081C /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				E31298D0215596760039081C /* ViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -146,6 +152,9 @@
 			isa = PBXGroup;
 			children = (
 				E31299142156D3380039081C /* ChartElement.swift */,
+				E3129918215705DB0039081C /* DottedVerticalView.swift */,
+				E312991A2159547C0039081C /* ChartLink.swift */,
+				E312991C2159CFAC0039081C /* TouchTrackingButton.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -285,7 +294,10 @@
 				E31298D7215596760039081C /* charttest.xcdatamodeld in Sources */,
 				E31299152156D3380039081C /* ChartElement.swift in Sources */,
 				E31298D1215596760039081C /* ViewController.swift in Sources */,
+				E3129919215705DB0039081C /* DottedVerticalView.swift in Sources */,
 				E31298CF215596760039081C /* AppDelegate.swift in Sources */,
+				E312991D2159CFAC0039081C /* TouchTrackingButton.swift in Sources */,
+				E312991B2159547C0039081C /* ChartLink.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -7,9 +7,22 @@
 //
 import UIKit
 
+protocol ChartElementDelegate {
+    func elementTapped(_ element: ChartElement)
+}
+
+
 class ChartElement: UIView {
     
     var lastLocation:CGPoint = CGPoint(x: 0, y: 0)
+    var links: [ChartLink] = []
+    var delegate: ChartElementDelegate?
+    
+    let defaultEmptyView: DottedVertical = {
+        let dotted = DottedVertical()
+        dotted.translatesAutoresizingMaskIntoConstraints = true
+        return dotted
+    }()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -17,22 +30,25 @@ class ChartElement: UIView {
         let panRecognizer = UIPanGestureRecognizer(target:self, action:#selector(detectPan))
         let tapRecognizer = UITapGestureRecognizer(target: self, action: #selector(detectTap))
         self.gestureRecognizers = [panRecognizer, tapRecognizer]
+        self.backgroundColor = .clear
         
-        //randomize view color
-        let blueValue = CGFloat(Int(arc4random() % 255)) / 255.0
-        let greenValue = CGFloat(Int(arc4random() % 255)) / 255.0
-        let redValue = CGFloat(Int(arc4random() % 255)) / 255.0
-        
-        self.backgroundColor = UIColor(red:redValue, green: greenValue, blue: blueValue, alpha: 1.0)
+        addSubview(defaultEmptyView)
+        addConstraintsWithFormat("V:|[v0]|", views: defaultEmptyView)
+        addConstraintsWithFormat("H:|[v0]|", views: defaultEmptyView)
+
     }
     
     @objc func detectTap(recognizer: UITapGestureRecognizer) {
-        print("TAPPED")
+        delegate?.elementTapped(self)
     }
     
     @objc func detectPan(recognizer:UIPanGestureRecognizer) {
         let translation  = recognizer.location(in: self.superview)
         self.center = CGPoint(x: translation.x,y: translation.y)
+        
+        for link in links {
+            link.updateLine()
+        }
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {

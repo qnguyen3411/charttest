@@ -20,8 +20,9 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="E9N-0X-deV">
                                 <rect key="frame" x="0.0" y="10" width="375" height="657"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LivePoster" translatesAutoresizingMaskIntoConstraints="NO" id="m6X-dP-rwM">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="m6X-dP-rwM">
                                         <rect key="frame" x="0.0" y="0.0" width="1500" height="1500"/>
+                                        <color key="backgroundColor" red="0.0" green="0.10636160714285714" blue="0.10000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="1500" id="5FO-1s-nzZ"/>
                                             <constraint firstAttribute="height" constant="1500" id="LBc-Di-2TX"/>
@@ -38,22 +39,53 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </scrollView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P0B-MH-OPU" customClass="TouchTrackingButton" customModule="charttest" customModuleProvider="target">
-                                <rect key="frame" x="313" y="32" width="46" height="30"/>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mV4-LU-R1y">
+                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                                <items>
+                                    <navigationItem id="Hte-xM-0MI">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="hL3-vt-wVe"/>
+                                        <barButtonItem key="rightBarButtonItem" title="Done" id="Ow7-iI-jEO"/>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yVr-JR-lIg" customClass="TouchTrackingButton" customModule="charttest" customModuleProvider="target">
+                                <rect key="frame" x="322" y="44" width="45" height="45"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="ZqN-E0-u0o"/>
-                                    <constraint firstAttribute="width" constant="46" id="cSF-U3-NyT"/>
+                                    <constraint firstAttribute="width" constant="45" id="SP4-Z3-X8c"/>
+                                    <constraint firstAttribute="height" constant="45" id="yxE-ly-ED2"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                <state key="normal" image="add_book">
+                                    <color key="titleColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R6Y-Cr-9lJ">
+                                <rect key="frame" x="322" y="113" width="45" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="45" id="QfP-kq-oh9"/>
+                                    <constraint firstAttribute="height" constant="45" id="Wgm-cC-bQH"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                <state key="normal" image="flowchart">
+                                    <color key="titleColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="linkButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PLg-na-Me8"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="E9N-0X-deV" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="11a-e2-5wn"/>
                             <constraint firstItem="E9N-0X-deV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="5Uw-NV-L6b"/>
+                            <constraint firstItem="R6Y-Cr-9lJ" firstAttribute="leading" secondItem="yVr-JR-lIg" secondAttribute="leading" id="D0F-QF-aTY"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="yVr-JR-lIg" secondAttribute="trailing" constant="8" id="JSe-zC-Dcq"/>
                             <constraint firstItem="E9N-0X-deV" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="10" id="LPf-bq-FGY"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="P0B-MH-OPU" secondAttribute="trailing" constant="16" id="RAY-7S-6oN"/>
-                            <constraint firstItem="P0B-MH-OPU" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="12" id="dKf-XF-anl"/>
+                            <constraint firstItem="mV4-LU-R1y" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="W8e-sf-XOj"/>
+                            <constraint firstItem="R6Y-Cr-9lJ" firstAttribute="top" secondItem="yVr-JR-lIg" secondAttribute="bottom" constant="24" id="bgJ-Hi-ATB"/>
+                            <constraint firstItem="yVr-JR-lIg" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="24" id="cf9-kj-pfb"/>
+                            <constraint firstItem="mV4-LU-R1y" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="pLV-mC-sWS"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="mV4-LU-R1y" secondAttribute="bottom" id="ugV-kA-VPs"/>
                             <constraint firstItem="E9N-0X-deV" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="xP0-0T-Sv8"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -61,7 +93,7 @@
                     <value key="contentSizeForViewInPopover" type="size" width="1500" height="1500"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <connections>
-                        <outlet property="addButton" destination="P0B-MH-OPU" id="nLD-Ug-azS"/>
+                        <outlet property="addButton" destination="yVr-JR-lIg" id="d2e-vc-kwy"/>
                         <outlet property="imageView" destination="m6X-dP-rwM" id="9XX-An-AZJ"/>
                         <outlet property="scrollView" destination="E9N-0X-deV" id="jfk-Tj-Noz"/>
                     </connections>
@@ -72,6 +104,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="LivePoster" width="300" height="429"/>
+        <image name="add_book" width="512" height="512"/>
+        <image name="flowchart" width="512" height="512"/>
     </resources>
 </document>
